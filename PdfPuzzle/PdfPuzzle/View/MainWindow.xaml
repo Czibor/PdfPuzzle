@@ -1,0 +1,21 @@
+﻿<Window x:Class="PdfPuzzleView.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:View="clr-namespace:PdfPuzzleView"
+		xmlns:ViewModel="clr-namespace:PdfPuzzleViewModel"
+		Title="PDF Puzzle"
+        MinWidth="250"
+        MinHeight="250"
+		Top="{View:SettingBinding Top}"
+		Left="{View:SettingBinding Left}"
+		Width="{View:SettingBinding Width}"
+        Height="{View:SettingBinding Height}">
+
+    <Window.DataContext>
+        <ViewModel:PuzzleViewModel/>
+    </Window.DataContext>
+
+    <View:PuzzleControl/>
+</Window>
